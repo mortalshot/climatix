@@ -12,8 +12,11 @@
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<meta name="description" content="Проектирование, подбор и поставка оборудования, монтаж и обслуживание инженерных систем">
 		<title>Главная страница</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1756415634117"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756415634117">
+		<script type="module" crossorigin="" src="./js/index.min.js?v=1756480179911"></script>
+		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1756480179911">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756480179911">
+		<link rel="stylesheet" crossorigin="" href="./css/heading.min.css?v=1756480179911">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -28,11 +31,11 @@
 					</div>
 					<div class="header-top__right" data-fls-dynamic=".header__container, 767.98, 2">
 						<div class="header-top__phone">
-							<a href="tel:+74995158552" class="link-hover">
+							<a href="tel:+74955322360" class="link-hover">
 								<span class="d-none d-md-block">
 									+ 7
-									<span class="_font-blue">(499)</span>
-									515-85-52
+									<span class="_font-blue">(495)</span>
+									532-23-60
 								</span>
 								<span class="header-top__phone-icon d-md-none">
 									<svg class="icon">
@@ -42,7 +45,7 @@
 							</a>
 						</div>
 						<div class="header-top__button">
-							<button type="button" class="btn btn_bg-primary btn_bg-skew" data-fls-button="" data-fls-popup-link="request">Обсудить проект</button>
+							<button type="button" class="btn btn_bg-primary btn_bg-skew" data-fls-button="" data-fls-popup-link="popup-request">Обсудить проект</button>
 						</div>
 					</div>
 				</div>
@@ -59,7 +62,7 @@
 									<a href="index.html" class="menu__link menu__link--active">Главная</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">О компании</a>
+									<a href="about.html" class="menu__link">О компании</a>
 								</li>
 								<li class="menu__item menu__item_has-children" data-fls-menuhaschildren="">
 									<a href="#" class="menu__link menu__button">Услуги</a>
@@ -93,7 +96,7 @@
 									<a href="#" class="menu__link">Партнеры</a>
 								</li>
 								<li class="menu__item">
-									<a href="#" class="menu__link">Контакты</a>
+									<a href="contacts.html" class="menu__link">Контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -115,11 +118,11 @@
 						<img alt="" class="_section-bg" loading="lazy" src="./assets/img/hero/hero-section-bg.webp" srcset="./assets/img/hero/hero-section-bg.webp 1x,./assets/img/hero/hero-section-bg-2x.webp 2x">
 					</picture>
 					<div class="hero__container">
-						<div class="hero__heading">
-							<h1 class="hero__title">
+						<div class="hero__heading heading" data-fls-heading="">
+							<h1 class="heading__title">
 								Проектирование, подбор и поставка оборудования, монтаж и обслуживание инженерных систем
 							</h1>
-							<div class="hero__subtitle">
+							<div class="heading__subtitle">
 								<span class="_font-semibold">Комплексные решения в области вентиляции и климатического оборудования:</span>
 								<span class="_font-italic _font-gray" style="display: block;">проектирование, реализация и обслуживание объектов под ключ</span>
 							</div>
@@ -270,7 +273,7 @@
 							Оказываем полный спектр услуг от разработки и закупки/поставки оборудования, до монтажа, пуско-наладки и технического обслуживания
 						</div>
 						<div class="sectors__button">
-							<button class="btn btn_bg-blue btn_bg-skew" data-fls-button="" data-fls-popup-link="request">Обсудить проект</button>
+							<button class="btn btn_bg-blue btn_bg-skew" data-fls-button="" data-fls-popup-link="popup-request">Обсудить проект</button>
 						</div>
 					</div>
 					<picture>
@@ -308,10 +311,10 @@
 									</ul>
 									<div class="solutions-banner__actions">
 										<div class="solutions-banner__button">
-											<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="request">Получить консультацию</button>
+											<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию</button>
 										</div>
 										<div class="solutions-banner__button">
-											<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="request">заказать расчет</button>
+											<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">заказать расчет</button>
 										</div>
 									</div>
 									<div class="solutions-banner__note">
@@ -343,10 +346,10 @@
 										</div>
 										<div class="card-item__actions">
 											<div class="card-item__button">
-												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="request">получить Консультацию</button>
+												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">получить Консультацию</button>
 											</div>
 											<div class="card-item__button">
-												<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="request">Подобрать</button>
+												<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Подобрать</button>
 											</div>
 										</div>
 									</article>
@@ -371,7 +374,7 @@
 										</div>
 										<div class="card-item__actions">
 											<div class="card-item__button">
-												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="request">Получить консультацию по монтажу</button>
+												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию по монтажу</button>
 											</div>
 										</div>
 									</article>
@@ -397,7 +400,7 @@
 										</div>
 										<div class="card-item__actions">
 											<div class="card-item__button">
-												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="request">Получить консультацию</button>
+												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию</button>
 											</div>
 										</div>
 									</article>
@@ -605,7 +608,7 @@
 							<div class="swiper-pagination"></div>
 						</div>
 						<div class="widget-partners__button">
-							<button type="button" class="btn btn_bg-blue btn_bg-skew" data-fls-button="" data-fls-popup-link="request">Обсудить проект</button>
+							<button type="button" class="btn btn_bg-blue btn_bg-skew" data-fls-button="" data-fls-popup-link="popup-request">Обсудить проект</button>
 						</div>
 					</div>
 					<picture>
@@ -742,15 +745,15 @@
 										, Ленинградский пр., д.37, к.9, подъезд 4, этаж 7, к. 721
 									</span>
 								</div>
-								<a href="tel:+74995158552" class="contacts-item contacts-item_big _link-animation" data-fls-iconanimation="">
+								<a href="tel:+74955322360" class="contacts-item contacts-item_big _link-animation" data-fls-iconanimation="">
 									<div class="contacts-item__icon _link-object">
 										<img src="./assets/img/icons/phone.svg" alt="" loading="lazy">
 									</div>
-									<span class="contacts-item__body">+ 7 (499) 515-85-52</span>
+									<span class="contacts-item__body">+ 7 (495) 532-23-60</span>
 								</a>
 							</ul>
 							<div class="footer-top__button">
-								<button type="button" class="btn btn_bg-blue btn_small" data-fls-button="" data-fls-popup-link="request">Получить консультацию</button>
+								<button type="button" class="btn btn_bg-blue btn_small" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию</button>
 							</div>
 						</div>
 						<nav class="footer-top__menu">
@@ -760,7 +763,7 @@
 									<div class="spollers__body">
 										<ul>
 											<li>
-												<a href="#">О нас</a>
+												<a href="about.html">О нас</a>
 											</li>
 											<li>
 												<a href="#">Новости&nbsp;и&nbsp;события</a>
@@ -772,7 +775,7 @@
 												<a href="#">Партнёры</a>
 											</li>
 											<li>
-												<a href="#">Контакты</a>
+												<a href="contacts.html">Контакты</a>
 											</li>
 										</ul>
 									</div>
@@ -847,7 +850,7 @@
 					</div>
 				</div>
 			</footer>
-			<div data-fls-popup="request" aria-hidden="true" class="popup">
+			<div data-fls-popup="popup-request" aria-hidden="true" class="popup">
 				<div data-fls-popup-wrapper="" class="popup__wrapper">
 					<div data-fls-popup-body="" class="popup__body">
 						<button data-fls-popup-close="" type="button" class="popup__close">
@@ -863,7 +866,7 @@
 							<form data-fls-form="" method="POST" action="#" class="form">
 								<div class="form__item">
 									<div class="form__input">
-										<input data-fls-input="" data-fls-form-validatenow="" autocomplete="off" type="text" name="request-name" data-fls-form-errtext="Обязательно для заполнения" placeholder="Ваше имя" class="input" required>
+										<input data-fls-input="" data-fls-form-validatenow="" autocomplete="off" type="text" name="popup-request-name" data-fls-form-errtext="Обязательно для заполнения" placeholder="Ваше имя" class="input" required>
 										<svg class="icon">
 											<use xlink:href="./assets/img/spritemap.svg#sprite-user"></use>
 										</svg>
@@ -871,7 +874,7 @@
 								</div>
 								<div class="form__item">
 									<div class="form__input">
-										<input data-fls-form-validatenow="" data-fls-input="" data-fls-input-mask="+7 (999) 999-9999" autocomplete="off" type="text" name="request-phone" data-fls-form-errtext="Обязательно для заполнения" placeholder="Телефон для связи" class="input">
+										<input data-fls-form-validatenow="" data-fls-input="" data-fls-input-mask="+7 (999) 999-9999" autocomplete="off" type="text" name="popup-request-phone" data-fls-form-errtext="Обязательно для заполнения" placeholder="Телефон для связи" class="input">
 										<svg class="icon">
 											<use xlink:href="./assets/img/spritemap.svg#sprite-phone"></use>
 										</svg>
@@ -879,7 +882,7 @@
 								</div>
 								<div class="form__item">
 									<div class="form__input">
-										<input data-fls-input="" autocomplete="off" type="email" name="request-email" data-fls-form-errtext="Обязательно для заполнения" placeholder="E-mail (не обязательно)" class="input">
+										<input data-fls-input="" autocomplete="off" type="email" name="popup-request-email" data-fls-form-errtext="Обязательно для заполнения" placeholder="E-mail (не обязательно)" class="input">
 										<svg class="icon">
 											<use xlink:href="./assets/img/spritemap.svg#sprite-email"></use>
 										</svg>
