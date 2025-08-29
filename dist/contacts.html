@@ -12,10 +12,10 @@
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<meta name="description" content="Проектирование, подбор и поставка оборудования, монтаж и обслуживание инженерных систем">
 		<title>Контакты</title>
-		<script type="module" crossorigin="" src="./js/app.min.js?v=1756481022562"></script>
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1756481022562">
-		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1756481022562">
-		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1756481022562">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1756482189328"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1756482189328">
+		<link rel="stylesheet" crossorigin="" href="./css/contacts.min.css?v=1756482189328">
+		<link rel="stylesheet" crossorigin="" href="./css/breadcrumbs.min.css?v=1756482189328">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -183,7 +183,8 @@
                   YMap,
                   YMapDefaultSchemeLayer,
                   YMapDefaultFeaturesLayer,
-                  YMapMarker
+                  YMapMarker,
+                  YMapListener
                 } = ymaps3;
                 const coords = [37.544423, 55.792630];
 
@@ -199,14 +200,55 @@
                   }), new YMapDefaultFeaturesLayer()]
                 );
 
-                const icon = document.createElement('img');
-                icon.src = '/assets/img/icons/pin.svg'; // твоя иконка
-                icon.alt = 'Метка';
+                const pin = document.createElement('div');
+                pin.className = 'marker';
+                pin.setAttribute('role', 'button');
+                pin.setAttribute('aria-label', 'Показать адрес');
 
                 const marker = new YMapMarker({
                   coordinates: coords
-                }, icon);
-                map.addChild(marker);;
+                }, pin);
+                map.addChild(marker);
+
+                // --- БАЛУН (изначально скрыт) ---
+                const balloonEl = document.createElement('div');
+                balloonEl.className = 'balloon';
+                balloonEl.innerHTML = 'г. Москва, пр-кт Ленинградский, д.37, к.9, подъезд&nbsp;4, этаж&nbsp;7, к.&nbsp;721';
+
+                const balloon = new YMapMarker({
+                  coordinates: coords,
+                  zIndex: 1100
+                }, balloonEl);
+
+                let isOpen = false;
+                const openBalloon = () => {
+                  if (!isOpen) {
+                    map.addChild(balloon);
+                    isOpen = true;
+                  }
+                };
+                const closeBalloon = () => {
+                  if (isOpen) {
+                    map.removeChild(balloon);
+                    isOpen = false;
+                  }
+                };
+
+                pin.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  isOpen ? closeBalloon() : openBalloon();
+                });
+                pin.addEventListener('keydown', (e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    pin.click();
+                  }
+                });
+
+                // Клик по карте — закрываем
+                map.addChild(new YMapListener({
+                  onClick: closeBalloon
+                }));
               })();
 						</script>
 					</div>
