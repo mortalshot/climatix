@@ -12,11 +12,15 @@
 		<link rel="shortcut icon" href="./assets/img/favicon.ico">
 		<meta name="description" content="Проектирование, подбор и поставка оборудования, монтаж и обслуживание инженерных систем">
 		<title>Главная страница</title>
-		<script type="module" crossorigin="" src="./js/index.min.js?v=1756482301117"></script>
-		<link rel="modulepreload" crossorigin="" href="./js/app.min.js">
-		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1756482301117">
-		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1756482301117">
-		<link rel="stylesheet" crossorigin="" href="./css/heading.min.css?v=1756482301117">
+		<script type="module" crossorigin="" src="./js/app.min.js?v=1758690305495"></script>
+		<script type="module" crossorigin="" src="./js/slider.min.js?v=1758690305495"></script>
+		<link rel="stylesheet" crossorigin="" href="./css/app.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/slider.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/index.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/solutionsbanner.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/heading.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/list.min.css?v=1758690305495">
+		<link rel="stylesheet" crossorigin="" href="./css/card.min.css?v=1758690305495">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -73,16 +77,16 @@
 									</button>
 									<ul class="menu__sub-list" id="submenu-services" style="opacity: 0;">
 										<li>
-											<a href="#">Проектирование инженерных систем</a>
+											<a href="design-of-engineering-systems.html">Проектирование инженерных систем</a>
 										</li>
 										<li>
-											<a href="#">Комплексная поставка оборудования и материалов</a>
+											<a href="сomprehensive-supply-of-equipment-and-materials-for-engineering-systems.html">Комплексная поставка оборудования и материалов</a>
 										</li>
 										<li>
-											<a href="#">Монтаж инженерных систем</a>
+											<a href="installation-of-engineering-systems.html">Монтаж инженерных систем</a>
 										</li>
 										<li>
-											<a href="#">Обслуживание инженерных систем</a>
+											<a href="maintenance-engineering-systems.html">Обслуживание инженерных систем</a>
 										</li>
 									</ul>
 								</li>
@@ -285,41 +289,43 @@
 				</section>
 				<section class="solutions" data-fls-solutions="">
 					<div class="solutions__container">
-						<div class="solutions__banner solutions-banner">
-							<picture>
-								<source media="(max-width: 400px)" srcset="./assets/img/solutions/solutions1-bg-400.webp 1x,./assets/img/solutions/solutions1-bg-400-2x.webp 2x" type="image/webp">
-								<source media="(max-width: 600px)" srcset="./assets/img/solutions/solutions1-bg-600.webp 1x,./assets/img/solutions/solutions1-bg-600-2x.webp 2x" type="image/webp">
-								<source media="(max-width: 1200px)" srcset="./assets/img/solutions/solutions1-bg-1200.webp 1x,./assets/img/solutions/solutions1-bg-1200-2x.webp 2x" type="image/webp">
-								<img alt="" class="solutions-banner__bg _ibg" src="./assets/img/solutions/solutions1-bg.webp" srcset="./assets/img/solutions/solutions1-bg.webp 1x,./assets/img/solutions/solutions1-bg-2x.webp 2x">
-							</picture>
-							<div class="solutions-banner__grid">
-								<div class="solutions-banner__image">
-									<picture>
-										<source media="(max-width: 400px)" srcset="./assets/img/solutions/solutions1-400.webp 1x,./assets/img/solutions/solutions1-400-2x.webp 2x" type="image/webp">
-										<source media="(max-width: 600px)" srcset="./assets/img/solutions/solutions1-600.webp 1x,./assets/img/solutions/solutions1-600-2x.webp 2x" type="image/webp">
-										<img alt="Спроектируем все" class="_ibg" loading="lazy" src="./assets/img/solutions/solutions1.webp" srcset="./assets/img/solutions/solutions1.webp 1x,./assets/img/solutions/solutions1-2x.webp 2x">
-									</picture>
-								</div>
-								<div class="solutions-banner__body">
-									<h3 class="solutions-banner__title">Спроектируем все технологические решения</h3>
-									<ul class="solutions-banner__list custom-list" data-fls-list="">
-										<li>системы отопления</li>
-										<li>системы вентиляции</li>
-										<li>системы кондиционирования</li>
-										<li>системы осушения воздуха</li>
-										<li>противопожарные системы и системы автоматизации</li>
-									</ul>
-									<div class="solutions-banner__actions">
-										<div class="solutions-banner__button">
-											<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию</button>
-										</div>
-										<div class="solutions-banner__button">
-											<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">заказать расчет</button>
-										</div>
+						<div class="solutions__banner solutions-banner" data-fls-solutionsbanner="">
+							<div class="solutions-banner__wrapper">
+								<picture>
+									<source media="(max-width: 400px)" srcset="./assets/img/solutions/solutions1-bg-400.webp 1x,./assets/img/solutions/solutions1-bg-400-2x.webp 2x" type="image/webp">
+									<source media="(max-width: 600px)" srcset="./assets/img/solutions/solutions1-bg-600.webp 1x,./assets/img/solutions/solutions1-bg-600-2x.webp 2x" type="image/webp">
+									<source media="(max-width: 1200px)" srcset="./assets/img/solutions/solutions1-bg-1200.webp 1x,./assets/img/solutions/solutions1-bg-1200-2x.webp 2x" type="image/webp">
+									<img alt="" class="solutions-banner__bg _ibg" src="./assets/img/solutions/solutions1-bg.webp" srcset="./assets/img/solutions/solutions1-bg.webp 1x,./assets/img/solutions/solutions1-bg-2x.webp 2x">
+								</picture>
+								<div class="solutions-banner__grid">
+									<div class="solutions-banner__image">
+										<picture>
+											<source media="(max-width: 400px)" srcset="./assets/img/solutions/solutions1-400.webp 1x,./assets/img/solutions/solutions1-400-2x.webp 2x" type="image/webp">
+											<source media="(max-width: 600px)" srcset="./assets/img/solutions/solutions1-600.webp 1x,./assets/img/solutions/solutions1-600-2x.webp 2x" type="image/webp">
+											<img alt="Спроектируем все" class="_ibg" loading="lazy" src="./assets/img/solutions/solutions1.webp" srcset="./assets/img/solutions/solutions1.webp 1x,./assets/img/solutions/solutions1-2x.webp 2x">
+										</picture>
 									</div>
-									<div class="solutions-banner__note">
-										<span class="_font-blue">*</span>
-										Консультация заказчика на предмет подбора оборудования по инженерным системам в рамках технического задания
+									<div class="solutions-banner__body">
+										<h3 class="solutions-banner__title">Спроектируем все технологические решения</h3>
+										<ul class="solutions-banner__list custom-list" data-fls-list="">
+											<li>системы отопления</li>
+											<li>системы вентиляции</li>
+											<li>системы кондиционирования</li>
+											<li>системы осушения воздуха</li>
+											<li>противопожарные системы и системы автоматизации</li>
+										</ul>
+										<div class="solutions-banner__actions">
+											<div class="solutions-banner__button">
+												<button type="button" class="btn btn_bg-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">Получить консультацию</button>
+											</div>
+											<div class="solutions-banner__button">
+												<button type="button" class="btn btn_border-blue btn_big" data-fls-button="" data-fls-popup-link="popup-request">заказать расчет</button>
+											</div>
+										</div>
+										<div class="solutions-banner__note">
+											<span class="_font-blue">*</span>
+											Консультация заказчика на предмет подбора оборудования по инженерным системам в рамках технического задания
+										</div>
 									</div>
 								</div>
 							</div>
@@ -646,7 +652,7 @@
 								<div class="widget-blog__wrapper swiper-wrapper">
 									<div class="widget-blog__slide swiper-slide">
 										<article class="card-item" data-fls-card="">
-											<a href="single-blog.html" class="card-item__image">
+											<a href="single-news.html" class="card-item__image">
 												<picture>
 													<source media="(max-width: 400px)" srcset="./assets/img/blog/blog1-preview-400.webp 1x,./assets/img/blog/blog1-preview-400-2x.webp 2x" type="image/webp">
 													<img alt="Мы закончили монтаж вентиляционного оборудования на ледовой арене в г. Киров" loading="lazy" src="./assets/img/blog/blog1-preview.webp" srcset="./assets/img/blog/blog1-preview.webp 1x,./assets/img/blog/blog1-preview-2x.webp 2x">
@@ -655,7 +661,7 @@
 											<div class="card-item__body">
 												<div class="card-item__heading">
 													<h4 class="card-item__title">
-														<a href="single-blog.html">Мы закончили монтаж вентиляционного оборудования на ледовой арене в г. Киров</a>
+														<a href="single-news.html">Мы закончили монтаж вентиляционного оборудования на ледовой арене в г. Киров</a>
 													</h4>
 												</div>
 											</div>
@@ -663,7 +669,7 @@
 									</div>
 									<div class="widget-blog__slide swiper-slide">
 										<article class="card-item" data-fls-card="">
-											<a href="single-blog.html" class="card-item__image">
+											<a href="single-news.html" class="card-item__image">
 												<picture>
 													<source media="(max-width: 400px)" srcset="./assets/img/blog/blog2-preview-400.webp 1x,./assets/img/blog/blog2-preview-400-2x.webp 2x" type="image/webp">
 													<img alt="Произведена установка и пуско-наладка климатического оборудования на ледовой арене в г. Киров" loading="lazy" src="./assets/img/blog/blog2-preview.webp" srcset="./assets/img/blog/blog2-preview.webp 1x,./assets/img/blog/blog2-preview-2x.webp 2x">
@@ -672,7 +678,7 @@
 											<div class="card-item__body">
 												<div class="card-item__heading">
 													<h4 class="card-item__title">
-														<a href="single-blog.html">
+														<a href="single-news.html">
 															Произведена установка и пуско-наладка климатического оборудования на ледовой арене в г. Киров
 														</a>
 													</h4>
@@ -682,7 +688,7 @@
 									</div>
 									<div class="widget-blog__slide swiper-slide">
 										<article class="card-item" data-fls-card="">
-											<a href="single-blog.html" class="card-item__image">
+											<a href="single-news.html" class="card-item__image">
 												<picture>
 													<source media="(max-width: 400px)" srcset="./assets/img/blog/blog3-preview-400.webp 1x,./assets/img/blog/blog3-preview-400-2x.webp 2x" type="image/webp">
 													<img alt="Завершили установку оборудования в офисе Сбербанка в городе Видное" loading="lazy" src="./assets/img/blog/blog3-preview.webp" srcset="./assets/img/blog/blog3-preview.webp 1x,./assets/img/blog/blog3-preview-2x.webp 2x">
@@ -691,7 +697,7 @@
 											<div class="card-item__body">
 												<div class="card-item__heading">
 													<h4 class="card-item__title">
-														<a href="single-blog.html">Завершили установку оборудования в офисе Сбербанка в городе Видное</a>
+														<a href="single-news.html">Завершили установку оборудования в офисе Сбербанка в городе Видное</a>
 													</h4>
 												</div>
 											</div>
@@ -699,7 +705,7 @@
 									</div>
 									<div class="widget-blog__slide swiper-slide">
 										<article class="card-item" data-fls-card="">
-											<a href="single-blog.html" class="card-item__image">
+											<a href="single-news.html" class="card-item__image">
 												<picture>
 													<source media="(max-width: 400px)" srcset="./assets/img/blog/blog3-preview-400.webp 1x,./assets/img/blog/blog3-preview-400-2x.webp 2x" type="image/webp">
 													<img alt="Завершили установку оборудования в офисе Сбербанка в городе Видное" loading="lazy" src="./assets/img/blog/blog3-preview.webp" srcset="./assets/img/blog/blog3-preview.webp 1x,./assets/img/blog/blog3-preview-2x.webp 2x">
@@ -708,7 +714,7 @@
 											<div class="card-item__body">
 												<div class="card-item__heading">
 													<h4 class="card-item__title">
-														<a href="single-blog.html">Завершили установку оборудования в офисе Сбербанка в городе Видное</a>
+														<a href="single-news.html">Завершили установку оборудования в офисе Сбербанка в городе Видное</a>
 													</h4>
 												</div>
 											</div>
@@ -903,10 +909,28 @@
 		</div>
 		<ul id="fls-dev-panel">
 			<li>
+				<a href="сomprehensive-supply-of-equipment-and-materials-for-engineering-systems.html">сomprehensive-supply-of-equipment-and-materials-for-engineering-systems</a>
+			</li>
+			<li>
+				<a href="single-news.html">single-news</a>
+			</li>
+			<li>
+				<a href="maintenance-engineering-systems.html">maintenance-engineering-systems</a>
+			</li>
+			<li>
+				<a href="installation-of-engineering-systems.html">installation-of-engineering-systems</a>
+			</li>
+			<li>
 				<a href="index.html">index</a>
 			</li>
 			<li>
+				<a href="design-of-engineering-systems.html">design-of-engineering-systems</a>
+			</li>
+			<li>
 				<a href="contacts.html">contacts</a>
+			</li>
+			<li>
+				<a href="archive-news.html">archive-news</a>
 			</li>
 			<li>
 				<a href="about.html">about</a>

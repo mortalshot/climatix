@@ -1,5 +1,3 @@
-import "./app.min.js";
-/* empty css            */
 function isObject$1(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -5113,7 +5111,7 @@ function initSliders() {
     });
   }
   if (document.querySelector(".widget-partners__slider")) {
-    let partnersInit = function() {
+    let partnersInit2 = function() {
       let partnersSlider;
       if (window.innerWidth < 768 && !partnersSlider) {
         partnersSlider = new Swiper(".widget-partners__slider", {
@@ -5147,7 +5145,8 @@ function initSliders() {
         partnersSlider = null;
       }
     };
-    partnersInit();
+    var partnersInit = partnersInit2;
+    partnersInit2();
     window.addEventListener("resize", initSliders);
   }
 }

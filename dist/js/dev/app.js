@@ -195,18 +195,18 @@ const gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) =>
 function spollers() {
   const spollersArray = document.querySelectorAll("[data-fls-spollers]");
   if (spollersArray.length > 0) {
-    let initSpollers2 = function(spollersArray2, matchMedia2 = false) {
+    let initSpollers = function(spollersArray2, matchMedia2 = false) {
       spollersArray2.forEach((spollersBlock) => {
         spollersBlock = matchMedia2 ? spollersBlock.item : spollersBlock;
         if (matchMedia2.matches || !matchMedia2) {
           spollersBlock.classList.add("--spoller-init");
-          initSpollerBody2(spollersBlock);
+          initSpollerBody(spollersBlock);
         } else {
           spollersBlock.classList.remove("--spoller-init");
-          initSpollerBody2(spollersBlock, false);
+          initSpollerBody(spollersBlock, false);
         }
       });
-    }, initSpollerBody2 = function(spollersBlock, hideSpollerBody = true) {
+    }, initSpollerBody = function(spollersBlock, hideSpollerBody = true) {
       let spollerItems = spollersBlock.querySelectorAll("details");
       if (spollerItems.length) {
         spollerItems.forEach((spollerItem) => {
@@ -228,7 +228,7 @@ function spollers() {
           }
         });
       }
-    }, setSpollerAction2 = function(e) {
+    }, setSpollerAction = function(e) {
       const el = e.target;
       if (el.closest("summary") && el.closest("[data-fls-spollers]")) {
         e.preventDefault();
@@ -241,7 +241,7 @@ function spollers() {
           const spollerSpeed = spollersBlock.dataset.flsSpollersSpeed ? parseInt(spollersBlock.dataset.flsSpollersSpeed) : 500;
           if (!spollersBlock.querySelectorAll(".--slide").length) {
             if (oneSpoller && !spollerBlock.open) {
-              hideSpollersBody2(spollersBlock);
+              hideSpollersBody(spollersBlock);
             }
             !spollerBlock.open ? spollerBlock.open = true : setTimeout(() => {
               spollerBlock.open = false;
@@ -279,7 +279,7 @@ function spollers() {
           });
         }
       }
-    }, hideSpollersBody2 = function(spollersBlock) {
+    }, hideSpollersBody = function(spollersBlock) {
       const spollerActiveBlock = spollersBlock.querySelector("details[open]");
       if (spollerActiveBlock && !spollersBlock.querySelectorAll(".--slide").length) {
         const spollerActiveTitle = spollerActiveBlock.querySelector("summary");
@@ -291,21 +291,20 @@ function spollers() {
         }, spollerSpeed);
       }
     };
-    var initSpollers = initSpollers2, initSpollerBody = initSpollerBody2, setSpollerAction = setSpollerAction2, hideSpollersBody = hideSpollersBody2;
-    document.addEventListener("click", setSpollerAction2);
+    document.addEventListener("click", setSpollerAction);
     const spollersRegular = Array.from(spollersArray).filter(function(item, index, self2) {
       return !item.dataset.flsSpollers.split(",")[0];
     });
     if (spollersRegular.length) {
-      initSpollers2(spollersRegular);
+      initSpollers(spollersRegular);
     }
     let mdQueriesArray = dataMediaQueries(spollersArray, "flsSpollers");
     if (mdQueriesArray && mdQueriesArray.length) {
       mdQueriesArray.forEach((mdQueriesItem) => {
         mdQueriesItem.matchMedia.addEventListener("change", function() {
-          initSpollers2(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+          initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
         });
-        initSpollers2(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+        initSpollers(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
       });
     }
   }
@@ -3747,3 +3746,8 @@ function sync() {
   }
 }
 sync();
+export {
+  slideToggle as a,
+  formValidate as f,
+  slideUp as s
+};
