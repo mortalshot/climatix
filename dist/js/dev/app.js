@@ -32,6 +32,10 @@ function getHash() {
     return location.hash.replace("#", "");
   }
 }
+function setHash(hash) {
+  hash = hash ? `#${hash}` : window.location.href.split("#")[0];
+  history.pushState("", "", hash);
+}
 let slideUp = (target, duration = 500, showmore = 0) => {
   if (!target.classList.contains("--slide")) {
     target.classList.add("--slide");
@@ -3747,7 +3751,11 @@ function sync() {
 }
 sync();
 export {
-  slideToggle as a,
+  setHash as a,
+  slideUp as b,
+  slideToggle as c,
+  dataMediaQueries as d,
   formValidate as f,
-  slideUp as s
+  getHash as g,
+  slideDown as s
 };
