@@ -6,6 +6,9 @@
   position: relative;
   padding-bottom: 5.625rem;
 }
+.wdgt-equipment__slider .swiper {
+  overscroll-behavior: contain;
+}
 .wdgt-equipment__slider .swiper-pagination {
   left: 50% !important;
   translate: -50% -20%;
@@ -332,6 +335,12 @@
   }
 }
 @media (any-hover: hover) {
+  .wdgt-equipment__title a {
+    transition: 0.3s ease color 0s;
+  }
+  .wdgt-equipment__title a:hover {
+    color: #097ed3;
+  }
   .cat-card__wrapper {
     transition: 0.3s ease border-color 0s;
   }

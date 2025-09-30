@@ -43,9 +43,9 @@
   display: none;
 }
 .faq__spollers.--spoller-init .spollers__title.--spoller-active .spollers__icon {
-  rotate: 180deg;
+  rotate: 270deg;
 }
-.faq__spollers.--spoller-init .spollers__title.--spoller-active .spollers__icon::after {
+.faq__spollers.--spoller-init .spollers__title.--spoller-active .spollers__icon::before {
   opacity: 0;
 }
 .faq__spollers.--spoller-init .spollers__icon {
@@ -63,19 +63,18 @@
   content: "";
   display: block;
   background-color: #097ed3;
-  height: 0.125rem;
   position: absolute;
   top: 50%;
   left: 50%;
 }
 .faq__spollers.--spoller-init .spollers__icon::before {
+  height: 0.125rem;
   left: 50%;
   translate: -50% -50%;
 }
 .faq__spollers.--spoller-init .spollers__icon::after {
-  rotate: 90deg;
-  translate: 0 -0.0625rem;
-  left: 0.28125rem;
+  width: 0.125rem;
+  translate: -50% -50%;
   transition: 0.3s ease all 0s;
 }
 @media (max-width: 20em) {
@@ -109,11 +108,11 @@
   .faq__spollers.--spoller-init .spollers__icon {
     height: 1.25rem;
   }
-  .faq__spollers.--spoller-init .spollers__icon::before, .faq__spollers.--spoller-init .spollers__icon::after {
-    width: 0.5rem;
+  .faq__spollers.--spoller-init .spollers__icon::before {
+    width: 0.625rem;
   }
   .faq__spollers.--spoller-init .spollers__icon::after {
-    left: 0.25rem;
+    height: 0.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 91.875em) {
@@ -139,19 +138,19 @@
     font-size: clamp( 0.875rem , 0.7880434782625rem  +  0.4347826087vw , 1.1875rem );
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    flex-basis: clamp( 1.25rem , 1.1282608695625rem  +  0.6086956522vw , 1.6875rem );
+    flex-basis: clamp( 1.25rem , 1.1456521739125rem  +  0.5217391304vw , 1.625rem );
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    width: clamp( 1.25rem , 1.1282608695625rem  +  0.6086956522vw , 1.6875rem );
+    width: clamp( 1.25rem , 1.1456521739125rem  +  0.5217391304vw , 1.625rem );
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    height: clamp( 1.25rem , 1.1282608695625rem  +  0.6086956522vw , 1.6875rem );
+    height: clamp( 1.25rem , 1.1456521739125rem  +  0.5217391304vw , 1.625rem );
   }
-  .faq__spollers.--spoller-init .spollers__icon::before, .faq__spollers.--spoller-init .spollers__icon::after {
-    width: clamp( 0.5rem , 0.3956521739125rem  +  0.5217391304vw , 0.875rem );
+  .faq__spollers.--spoller-init .spollers__icon::before {
+    width: clamp( 0.625rem , 0.55543478260625rem  +  0.347826087vw , 0.875rem );
   }
   .faq__spollers.--spoller-init .spollers__icon::after {
-    left: clamp( 0.25rem , 0.241304347825rem  +  0.0434782609vw , 0.28125rem );
+    height: clamp( 0.625rem , 0.55543478260625rem  +  0.347826087vw , 0.875rem );
   }
 }
 @media (min-width: 91.875em) {
@@ -177,18 +176,18 @@
     font-size: 1.1875rem;
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    flex-basis: 1.6875rem;
+    flex-basis: 1.625rem;
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    width: 1.6875rem;
+    width: 1.625rem;
   }
   .faq__spollers.--spoller-init .spollers__icon {
-    height: 1.6875rem;
+    height: 1.625rem;
   }
-  .faq__spollers.--spoller-init .spollers__icon::before, .faq__spollers.--spoller-init .spollers__icon::after {
+  .faq__spollers.--spoller-init .spollers__icon::before {
     width: 0.875rem;
   }
   .faq__spollers.--spoller-init .spollers__icon::after {
-    left: 0.28125rem;
+    height: 0.875rem;
   }
 }
